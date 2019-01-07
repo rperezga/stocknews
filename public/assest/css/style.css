@@ -1,0 +1,16 @@
+#logo {
+    width: 200px;
+}
+
+.menu-btn{
+    margin-left: 20px;
+}
+
+.card {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#flex-container{
+    display: flex;
+}

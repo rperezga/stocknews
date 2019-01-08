@@ -8,8 +8,6 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
-var PORT = 3000;
-
 // Initialize Express
 var app = express();
 
@@ -116,6 +114,8 @@ app.post("/articles/:id", function (req, res) {
 });
 
 // Start the server
-app.listen(PORT, function () {
-  console.log("App running on port " + PORT + "!");
+var PORT = process.env.PORT || 3000;
+app.listen(PORT, function (err) {
+    if (!err)
+        console.log("Server listening on: http://localhost:" + PORT);
 });

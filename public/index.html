@@ -24,17 +24,13 @@
             <button type="button" class="btn btn-outline-primary menu-btn" id="scrape">Scrape news!</button>
           </li>
 
-          <li class="nav-item">
-            <button type="button" class="btn btn-outline-primary menu-btn" id="latest">News with notes!</button>
-          </li>
-
         </ul>
       </div>
     </div>
   </nav>
 
 
-  <!-- Modal -->
+  <!-- Modal Add Note -->
   <div class="modal fade" id="noteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -45,7 +41,7 @@
           </button>
         </div>
         <div class="modal-body">
-            <textarea class="form-control" id="noteToAdd" rows="3"></textarea>
+          <textarea class="form-control" id="noteToAdd" rows="3"></textarea>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -55,13 +51,35 @@
     </div>
   </div>
 
+  <!-- Modal View Note -->
+  <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">View note</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5 id="title"></h5>
+          <hr>
+          <p id="noteView"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div class="container">
-    <h1>Find out the latest news here:</h1>
+    <h3>Find out the latest news here:</h3>
     <hr>
 
     <div class="container" id="dataNews"></div>
-    
+
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
